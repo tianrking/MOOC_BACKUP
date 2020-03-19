@@ -1,0 +1,39 @@
+I=imread('1.bmp');
+figure(1)
+imshow(real(I));
+I=I(:,:,3);
+fftI=fft2(I);
+sfftI=fftshift(fftI); %求离散傅里叶频谱
+%对原始图像进行二维离散傅里叶变换，并将其坐标原点移到频谱图中央位置
+RRfdp1=real(sfftI);
+IIfdp1=imag(sfftI);
+a=sqrt(RRfdp1.^2+IIfdp1.^2);
+a=(a-min(min(a)))/(max(max(a))-min(min(a)))*225; 
+figure(2)
+imshow(real(a));
+I=imread('2.bmp');
+figure(3),
+imshow(real(I));
+I=I(:,:,3);
+fftI=fft2(I);
+sfftI=fftshift(fftI); %求离散傅里叶频谱
+%对原始图像进行二维离散傅里叶变换，并将其坐标原点移到频谱图中央位置
+RRfdp1=real(sfftI);
+IIfdp1=imag(sfftI);
+a=sqrt(RRfdp1.^2+IIfdp1.^2);
+a=(a-min(min(a)))/(max(max(a))-min(min(a)))*225;
+figure(4),
+imshow(real(a));
+I=imread('3.bmp');
+figure(5),
+imshow(real(I));
+I=I(:,:,3);
+fftI=fft2(I);
+sfftI=fftshift(fftI); %求离散傅里叶频谱
+%对原始图像进行二维离散傅里叶变换，并将其坐标原点移到频谱图中央位置
+RRfdp1=real(sfftI);
+IIfdp1=imag(sfftI);
+a=sqrt(RRfdp1.^2+IIfdp1.^2);
+a=(a-min(min(a)))/(max(max(a))-min(min(a)))*225;
+figure(6),
+imshow(real(a)); 
