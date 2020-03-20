@@ -24,4 +24,16 @@
 % 第三章
 %imadjust(f,[lowin highin],[lowout highout ],gamma) in 映射到 out
 % 3.3
+% figure(1);bar(h2,h1);figure(2);imhist(a); 柱状图 默认直方图(f,b)b灰度个数
+% numel(f)像素个数 stem绘图 plot绘图
+% histeq(f,b) 直方图均质化\
 
+% 3.5 不理解 非线性空间滤波
+
+% subplot(2,4,1),imshow(a),hold on; 
+% g11=imfilter(a,w,'replicate');  
+% subplot(2,4,2),imshow(g11),hold on;
+% w=fspecial('type',parameter) 参数parameter
+% w=fspecial('laplacian',alpha) alpha 0,1
+
+%
